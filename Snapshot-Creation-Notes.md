@@ -89,14 +89,21 @@ the parts that changed in the 2.1.0 SDK:
   - Newer ARM Gnu Toolchain (13.3.Rel1)
   - 2.1.0 picotool
 
-The 1.5.1 SDK sets up a bunch of build tools that are needed.  As always
-with open-source projects, you need a steaming pile of Linux-world build
-tools with specific version numbers, so it's a nightmare to cobble it all
-together by hand.  The automated 1.5.1 installer has all of the necessary
-tools (at their correct version snapshots), pre-built and pre-packaged,
-so we don't have to go through the arduous procedure of installing all
-of the build tools to *build the build tools*.  Fortunately, the newer
-SDK seems happy to run with most of the same build tools as the older
+The 1.5.1 SDK sets up a bunch of build tools that are needed.  As
+always with open-source projects, you need a steaming pile of
+Linux-world build tools with specific version numbers, so it's a
+nightmare to cobble it all together by hand.  These are third-party
+tools like git, ninja, python, and cmake that aren't part of a basic
+Windows setup, and which tend to have incompatible changes often
+enough that Linux build procedures always insist on *specific*
+versions being installed.  It's never enough to have python, you have
+to have python 3.6.7.12 exactly, or nothing works.  The magic of the
+automated 1.5.1 installer was that it included all of the required
+third-party tools at their required version levels, all pre-built and
+pre-packaged, so we didn't have to go through the arduous procedure of
+finding and installing all of the *additional* build tools needed to
+*build the build tools*.  Fortunately, the newer SDK seems happy to
+work smoothly with most of the same build tool versions as the older
 SDK, so installing the older SDK with its pre-built tools gets us 90%
 of the way there.
 
