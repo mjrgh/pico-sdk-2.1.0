@@ -97,7 +97,13 @@ tools like git, ninja, python, and cmake that aren't part of a basic
 Windows setup, and which tend to have incompatible changes often
 enough that Linux build procedures always insist on *specific*
 versions being installed.  It's never enough to have python, you have
-to have python 3.6.7.12 exactly, or nothing works.  The magic of the
+to have python 3.6.7.12 exactly, or nothing works.  And all of these
+are distributed in source-code form, so you can't just download a 
+SETUP program for most of them; you have to download the source and
+then build it yourself, which is often difficult on Windows because
+the build processes depend on a bunch of Linus-specific tools.  It
+becomes a bottomless cascade of tracking down dependencies for the
+dependencies.  The magic of the
 automated 1.5.1 installer was that it included all of the required
 third-party tools at their required version levels, all pre-built and
 pre-packaged, so we didn't have to go through the arduous procedure of
