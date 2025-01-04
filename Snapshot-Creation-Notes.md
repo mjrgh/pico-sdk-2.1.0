@@ -101,7 +101,7 @@ to have python 3.6.7.12 exactly, or nothing works.  And all of these
 are distributed in source-code form, so you can't just download a 
 SETUP program for most of them; you have to download the source and
 then build it yourself, which is often difficult on Windows because
-the build processes depend on a bunch of Linus-specific tools.  It
+the build processes depend on a bunch of Linux-specific tools.  It
 becomes a bottomless cascade of tracking down dependencies for the
 dependencies.  The magic of the
 automated 1.5.1 installer was that it included all of the required
