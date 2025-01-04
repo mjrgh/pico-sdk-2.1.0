@@ -36,7 +36,7 @@ installer; it's just a literal copy of my directory structure.
 
 * Open `version.ini` from the newly copied files in a text editor, and change PICO_INSTALL_PATH to match the folder where you installed it
 
-* You'll also need NMAKE, which is a proprietary Microsoft program that I can't include here.
+* You'll also need to install NMAKE, which is a proprietary Microsoft program that I can't include here.
   I think the easiest way to get it is to install the free Microsoft Visual Studio Community Edition.
 
 
