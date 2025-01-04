@@ -46,7 +46,7 @@ installer; it's just a literal copy of my directory structure.
 
 ### Technical details
 
-Notes on how I created this snapshot, and how to replicate it yourself:
+Notes on how I created this snapshot, and how to replicate it yourself from the original sources:
 
 [Snapshot-Creation-Notes.md](Snapshot-Creation-Notes.md)
 
