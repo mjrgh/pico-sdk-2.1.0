@@ -1,4 +1,4 @@
-## How I created this snapshot
+# How I created this snapshot
 
 Just to be clear, **you don't have to repeat these steps** to use the snapshot.
 That's the whole point of the snapshot - you just copy it and you're set to go.
