@@ -19,13 +19,6 @@ for more flexibility in selecting editors and other tools, but for now
 it's a practical necessity, until the VS Code extension matures to the
 point where it's working.
 
-## License
-
-Everything here is licensed under the original terms of the third-party source.
-It probably goes without saying that the Gnu toolchain tools are all under GPL.
-The Pico SDK library source is released under a 3-clause BSD license.
-
-
 ## How to install
 
 This snapshot is designed to be fully self-contained, following the
@@ -158,4 +151,11 @@ checks that it's up to date.  I don't use it for anything myself, but
 the CMake script bombs out if it's not present or isn't up-to-date,
 so it was easier to just build it than to hack the build script to
 bypass it.  Plus some people might use it.
+
+## License
+
+Everything here is licensed under the original terms of the third-party source.
+It probably goes without saying that the Gnu toolchain tools are all under GPL.
+The Pico SDK library source is released under a 3-clause BSD license.
+
 
