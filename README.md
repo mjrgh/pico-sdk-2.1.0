@@ -36,6 +36,9 @@ installer; it's just a literal copy of my directory structure.
 
 * Open `version.ini` from the newly copied files in a text editor, and change PICO_INSTALL_PATH to match the folder where you installed it
 
+* You'll also need NMAKE, which is a proprietary Microsoft program that I can't include here.
+  I think the easiest way to get it is to install the free Microsoft Visual Studio Community Edition.
+
 
 ### How to start a session
 
@@ -43,10 +46,9 @@ installer; it's just a literal copy of my directory structure.
 
 * Run `c:\pico-sdk-2.1.0\pico-env.cmd` (replace c:\ with the actual install path)
 
-* Your PATH must also include NMAKE.EXE from the Microsoft Visual
-Studio build tools.  That's a proprietary program that I can't include
-in this image.  I think the easiest way to get it is to install
-the free Microsoft Visual Studio Community Edition.
+* Also make sure that NMAKE (from the Microsoft Visual Studio program folder) is in your PATH
+
+* Now you can build your Pico projects with CMAKE and NMAKE per the usual command-line build procedures for the Pico SDK
 
 
 ## How I created this snapshot
