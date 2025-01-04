@@ -86,7 +86,7 @@ PICO_REG_KEY=Software\Raspberry Pi\Pico SDK v2.1.0
 
 * Edit `ReadMe.txt` to add a comment at the top that it's a modified snapshot
 
-* Edit `pico-env.cmd`, find the line `call :AddToPath "%PICO_INSTALL_PATH%\picotool", and add `\bin` at the end of the path
+* Edit `pico-env.cmd`, find the line `call :AddToPath "%PICO_INSTALL_PATH%\picotool"`, and add `\bin` at the end of the path
 
 * Install the ARM build tools:
    * https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
@@ -126,8 +126,8 @@ PICO_REG_KEY=Software\Raspberry Pi\Pico SDK v2.1.0
    * `mkdir build`
    * `cd build`
    * `cmake -S . -G "Nmake Makefiles" ..`
-   * nmake
-   * create folder <path-to>\pico-sdk-2.1.0\picotool
+   * `nmake`
+   * create folder `<path-to>\pico-sdk-2.1.0\picotool`
    * `cmake --install . --prefix <path-to>\pico-sdk-2.1.0\picotool`
 
 
