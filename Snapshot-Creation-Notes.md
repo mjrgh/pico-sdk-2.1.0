@@ -93,16 +93,39 @@ The 1.5.1 SDK sets up a bunch of build tools that are needed.  As always
 with open-source projects, you need a steaming pile of Linux-world build
 tools with specific version numbers, so it's a nightmare to cobble it all
 together by hand.  The automated 1.5.1 installer has all of the necessary
-tools (at their correct version snapshots) pre-packaged.
+tools (at their correct version snapshots), pre-built and pre-packaged,
+so we don't have to go through the arduous procedure of installing all
+of the build tools to *build the build tools*.  Fortunately, the newer
+SDK seems happy to run with most of the same build tools as the older
+SDK, so installing the older SDK with its pre-built tools gets us 90%
+of the way there.
 
-The newer SDK needs a newer version of the Gnu toolchain, but that's a
-fairly easy one to install manually, since ARM packages a nice Windows
-installer for it.
+That leaves just a few things that are different between the new and
+old SDK.  First and foremost, the SDK library files themselves.  But
+those are pretty easy, since the build environment just needs a direct
+snapshot of the sources in the SDK's git repository, arranged in the
+same directory structure.  We can replicate this by cloning the git
+and checking out the desired version tag.
 
-The only other new executable that seems to be required is the latest
-picotool, and that's really only needed because the CMake script
-checks that it's up to date.  I don't use it for anything myself, but
-the CMake script bombs out if it's not present or isn't up-to-date,
-so it was easier to just build it than to hack the build script to
-bypass it.  Plus some people might use it.
+The second thing that's important to update in the new SDK is the
+Arm GNU toolchain.  The VS Code configuration has a list of the
+acceptable toolchain versions, so I picked the most recent (13.3.Rel1)
+on the list.  This is also a fairly easy update, because Arm maintains
+an official collection of GNU cross-compiler toolchain versions for its 
+CPUs (the Pico RP2040 CPU is Arm-based), and does a nice job of
+packaging them for the major platforms, including Windows.  And
+once installed, the GNU tool set is all nicely self-contained, so
+we can just make a snapshot of its install directory to include in our
+updated build tree.
+
+The only remaining loose end is "picotool", a custom tool that Raspberry
+Pi provides.  That's really only needed because the CMake script
+irritatingly insists on checking that it's present and up-to-date,
+and bombs out early in the project build if it's not.  I say
+"irritating" because the CMake script doesn't bother to check
+whether or not the project it's building actually needs picotool;
+it just assumes that it's a requirement, even when the project doesn't
+care about it.  Fortunately, it's not too hard to build on Windows,
+so building it seemed like the easiest way to resolve the script
+complaint.  Besides, some projects might actually need it.
 
