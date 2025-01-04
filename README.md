@@ -51,6 +51,16 @@ the free Microsoft Visual Studio Community Edition.
 
 ## How I created this snapshot
 
+Just to be clear, **you don't have to repeat these steps** to use the snapshot.
+That's the whole point of the snapshot - you just copy it and you're set to go.
+I'm documenting the process because it's a certainty that it'll have to be
+repeated the next time Raspberry Pi releases a new major Pico SDK update.
+I'm hoping that documenting it will save me some time reconstructing what I did.
+It also should enable anyone else to make their own updated snapshot, without
+having to wait for me to get around to it, in case I don't jump on it the instant
+the next SDK comes out.
+
+
 * Create an empty pico-sdk-2.1.0 folder to serve as the snapshot container
 
 * Create a file called version.ini, containing:
