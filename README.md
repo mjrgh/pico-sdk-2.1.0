@@ -12,12 +12,12 @@ since been deprecated, replaced with a VS Code extension, at
 https://marketplace.visualstudio.com/items?itemName=raspberry-pi.raspberry-pi-pico.
 See also [Getting started with Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf).
 
-I created this snapshot because the VS Code extension still seems a
-work-in-progress, to such an extent that I can't even get it to
+I created this snapshot because the VS Code extension still seems to 
+be a work-in-progress, to such an extent that I can't even get it to
 install on my system.  I tend to prefer a command-line setup anyway,
 for more flexibility in selecting editors and other tools, but for now
-it's a practical necessity, until the VS Code extension matures to the
-point where it's working.
+it seems to be my only option since I can't get the official VS Code
+package to work.
 
 ## How to install
 
