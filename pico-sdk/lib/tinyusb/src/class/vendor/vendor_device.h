@@ -27,6 +27,14 @@
 #ifndef _TUSB_VENDOR_DEVICE_H_
 #define _TUSB_VENDOR_DEVICE_H_
 
+// Flag that this is the modified Pinscape Pico version of the library,
+// with a fix for a serious regression in the official 0.17.0 release.
+// The error is also corrected in the official 0.18.0 release (in commit
+// 53989A9).  The fix is actually in vendor_device.c (vendord_reset()),
+// but the macro flag has to be in a header for client code to be able
+// to test it. 
+#define PINSCAPE_PICO_TUSB_VENDOR_DEVICE_FIX_53989A9   1
+
 #include "common/tusb_common.h"
 
 #ifndef CFG_TUD_VENDOR_EPSIZE
